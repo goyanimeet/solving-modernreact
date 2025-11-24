@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+
+
+
+.mon {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+ 
+}
+
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-inner {
+  display: flex;
+  animation: slide-logos 30s linear infinite;
+  animation-timing-function: linear ;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  margin-right: 40px; /* space between logos */
+}
+
+@keyframes slide-logos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* adjust based on number of logos / width */
+  }
+}
+.aboutaimgani{
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%,-50%);
+}
+
+
+/* selected work css */
+
+
+.marquee {
+  overflow: hidden;
+  display: flex;
+  /* optional: adjust height / padding as needed */
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0; /* Prevent shrinking */
+  white-space: nowrap; /* Keep items in one line */
+  /* you can set gap if you want space between items */
+  /* gap: 2rem; */
+  animation: marquee-scroll 15s linear infinite;
+}
+
+.marquee-item {
+  /* Prevent shrinking of each item */
+  flex-shrink: 0;
+  padding: 0 1rem; /* adjust space inside items */
+  font-size: 2rem; /* example font size */
+  display: flex;
+  align-items: center;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Move left by full width of one marquee-content */
+    transform: translateX(-100%);
+  }
+}
