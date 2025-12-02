@@ -6,10 +6,11 @@ import logo4 from "../assets/images/marlogo4.svg";
 import logo5 from "../assets/images/marlogo5.svg";
 import { motion } from "motion/react";
 import LocomotiveScroll from "locomotive-scroll";
+import CountUp from "./CountUp";
 const Banner = () => {
   console.log(motion);
   const scroll = new LocomotiveScroll();
-  console.log(scroll)
+  console.log(scroll);
   return (
     <>
       {/* <div className="flex justify-between pt-10 px-4 ">
@@ -43,7 +44,7 @@ const Banner = () => {
         </div>
       </div> */}
       <div data-scroll data-scroll-speed="1" className="container mx-auto">
-        <div className="flex flex-wrap justify-between py-10 px-4 md:px-8 lg:px-4">
+        <div className="flex flex-wrap justify-between py-15 px-4  max-md:py-10 md:px-8 lg:px-4">
           <motion.div
             initial={{
               opacity: 0,
@@ -58,7 +59,7 @@ const Banner = () => {
               duration: 1,
               ease: "easeIn",
             }}
-            className="w-full  px-3 sm:w-1/4 md:w-1/4 flex flex-col items-start "
+            className="w-full px-3 sm:w-1/4 md:w-1/4 flex flex-col items-start "
           >
             <motion.div
               initial={{
@@ -76,7 +77,16 @@ const Banner = () => {
             ></motion.div>
             <p className="py-2 text-xs sm:text-sm tracking-wide">CLIENTS</p>
             <p className="text-4xl sm:text-5xl md:text-6xl font-bold flex items-center">
-              200 <span className="text-lime-300 ml-1">+</span>
+              <CountUp
+                from={0}
+                to={200}
+                separator=","
+                direction="up"
+                duration={1}
+                
+                className="count-up-text"
+              />{" "}
+              <span className="text-lime-300 ml-1">+</span>
             </p>
           </motion.div>
 
@@ -112,7 +122,15 @@ const Banner = () => {
             ></motion.div>
             <p className="py-2 text-xs sm:text-sm tracking-wide">PROJECTS</p>
             <p className="text-4xl sm:text-5xl md:text-6xl font-bold flex items-center">
-              300 <span className="text-lime-300 ml-1">+</span>
+              <CountUp
+                from={0}
+                to={300}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text"
+              />{" "}
+              <span className="text-lime-300 ml-1">+</span>
             </p>
           </motion.div>
 
@@ -148,7 +166,15 @@ const Banner = () => {
             ></motion.div>
             <p className="py-2 text-xs sm:text-sm tracking-wide">FOLLOWER</p>
             <p className="text-4xl sm:text-5xl md:text-6xl font-bold flex items-center">
-              90 <span className="text-lime-300 ml-1">K</span>
+              <CountUp
+                from={0}
+                to={90}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text"
+              />{" "}
+              <span className="text-lime-300 ml-1">K</span>
             </p>
           </motion.div>
 
@@ -186,63 +212,71 @@ const Banner = () => {
               HAPPY CUSTOMER
             </p>
             <p className="text-4xl sm:text-5xl md:text-6xl font-bold flex items-center">
-              100 <span className="text-lime-300 ml-1">%</span>
+              <CountUp
+                from={0}
+                to={100}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text"
+              />{" "}
+              <span className="text-lime-300 ml-1">%</span>
             </p>
           </motion.div>
         </div>
 
         {/* my client */}
-        <div className=" w-full flex items-center justify-center   max-sm:inline-flex  ">
-          <div className="flex items-center  w-[30%]  px-8 max-sm:px-6">
-            <div className="h-0.5 w-10   bg-black"></div>
+        <div className=" w-full flex  items-center justify-center py-2  max-md:py-0 max-sm:inline-flex  ">
+          <div className="flex items-center  w-[30%]  px-4 max-sm:px-6">
+            <div className="h-0.5 w-10 bg-black"></div>
             <p className="px-2">MY CLINETS</p>
           </div>
-          <div className=" py-2  w-full max-sm:py-0.5 overflow-hidden">
-            <div class="logo-marquee flex ">
-              <div class="marquee-inner flex  font-medium justify-between items-center ">
-                <div class="marquee-item">
-                  <img src={logo1} alt="" className="h-auto  " />
+          <div className="py-2 w-full max-sm:py-0.5 overflow-hidden">
+            <div className="logo-marquee flex">
+              <div className="marquee-inner  flex font-medium justify-between items-center ">
+                <div className="marquee-item">
+                  <img src={logo1} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo2} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo3} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo4} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo5} alt="" className="h-auto " />
                 </div>
-                  <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo1} alt="" className="h-auto  " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo2} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo3} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo4} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo5} alt="" className="h-auto " />
                 </div>
-                  <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo1} alt="" className="h-auto  " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo2} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo3} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo4} alt="" className="h-auto " />
                 </div>
-                <div class="marquee-item">
+                <div className="marquee-item">
                   <img src={logo5} alt="" className="h-auto " />
                 </div>
               </div>
@@ -250,9 +284,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
-
-      
     </>
   );
 };

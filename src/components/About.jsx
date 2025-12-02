@@ -9,59 +9,59 @@
 //   return (
 //     <>
 //       <div className="container mx-auto">
-//         <div class=" w-full border-t-2 leading-10 py-5 ">
-//           {/* <div class="marquee-inner flex justify-between *:text-4xl *:font-medium overflow-hidden">
-//             <div class="marquee-item ">
+//         <div className=" w-full border-t-2 leading-10 py-5 ">
+//           {/* <div className="marquee-inner flex justify-between *:text-4xl *:font-medium overflow-hidden">
+//             <div className="marquee-item ">
 //               <span className="px-2 text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2  text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2 text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2 text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2  text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2  text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2 text-4xl">·</span> SELECTED WORK
 //             </div>
-//             <div class="marquee-item">
+//             <div className="marquee-item">
 //               <span className="px-2  text-4xl">·</span> SELECTED WORK
 //             </div>
 //           </div> */}
-//           <div class="marquee">
-//             <div class="marquee-content ">
-//               <div class="marquee-item ">
+//           <div className="marquee">
+//             <div className="marquee-content ">
+//               <div className="marquee-item ">
 //                 <span>·</span> SELECTED WORK
 //               </div>
-//               <div class="marquee-item">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
-//               <div class="marquee-item">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
-//               <div class="marquee-item">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
 //             </div>
-//             <div class="marquee-content">
-//               <div class="marquee-item">
+//             <div className="marquee-content">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
-//               <div class="marquee-item">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
-//               <div class="marquee-item">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
-//               <div class="marquee-item">
+//               <div className="marquee-item">
 //                 <span>·</span> SELECTED WORK
 //               </div>
 //             </div>
@@ -139,9 +139,7 @@
 
 // export default About;
 
-
-
-// 
+//
 import React, { useRef } from "react";
 import about1 from "../assets/images/image-1.webp";
 import about2 from "../assets/images/image-2.webp";
@@ -150,7 +148,7 @@ import { motion } from "motion/react";
 const About = () => {
   const draglimit = useRef();
   const draglimit2 = useRef();
-console.log(motion)
+  console.log(motion);
   return (
     <>
       <div className="container mx-auto">
@@ -170,6 +168,13 @@ console.log(motion)
               <div className="marquee-item">
                 <span className="px-1 sm:px-2">·</span> SELECTED WORK
               </div>
+               <div className="marquee-item">
+                <span className="px-1 sm:px-2">·</span> SELECTED WORK
+              </div>
+               <div className="marquee-item">
+                <span className="px-1 sm:px-2">·</span> SELECTED WORK
+              </div>
+              
             </div>
             <div className="marquee-content">
               <div className="marquee-item">
@@ -192,18 +197,22 @@ console.log(motion)
         <div className="h-auto flex flex-col lg:flex-row justify-between w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
           {/* First Portfolio Item */}
           <div className="w-full lg:w-1/2 px-2 sm:px-4 mb-8 lg:mb-0 relative group">
-            <div className="img1 relative overflow-hidden rounded-lg" ref={draglimit}>
+            <div className="img1 relative overflow-hidden" ref={draglimit}>
               <img
                 src={about1}
                 alt="Vision Branding Project"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto object-cover transition-transform duration-300  group-hover:scale-105"
               />
               <motion.div
                 initial={{ scale: 0.1 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                whileInView={{ scale: 1, opacity: 1, ease: "easeInOut" }}
-                onViewportEnter={{ once: true }}
-                exit={{ scale: 0, opacity: 0, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: ["easeIn", "easeOut"] }}
+                whileInView={{
+                  scale: 1,
+                  opacity: 1,
+                  ease: ["easeIn", "easeOut"],
+                }}
+                onViewportEnter={{ once: false }}
+                exit={{ scale: 0, opacity: 0, ease: ["easeIn", "easeOut"] }}
                 drag
                 dragConstraints={draglimit}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
@@ -225,7 +234,7 @@ console.log(motion)
 
           {/* Second Portfolio Item */}
           <div className="w-full lg:w-1/2 px-2 sm:px-4 relative group">
-            <div className="img2 relative overflow-hidden rounded-lg" ref={draglimit2}>
+            <div className="img2 relative overflow-hidden" ref={draglimit2}>
               <img
                 src={about2}
                 alt="Brand Studio Project"
@@ -233,10 +242,14 @@ console.log(motion)
               />
               <motion.div
                 initial={{ scale: 0.1 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                whileInView={{ scale: 1, opacity: 1, ease: "easeInOut" }}
-                onViewportEnter={{ once: true }}
-                exit={{ scale: 0, opacity: 0, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: ["easeIn", "easeOut"] }}
+                whileInView={{
+                  scale: 1,
+                  opacity: 1,
+                  ease: ["easeIn", "easeOut"],
+                }}
+                onViewportEnter={{ once: false }}
+                exit={{ scale: 0, opacity: 0, ease: ["easeIn", "easeOut"] }}
                 drag
                 dragConstraints={draglimit2}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
@@ -258,7 +271,7 @@ console.log(motion)
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx="true">{`
         /* Marquee Animation */
         .marquee {
           display: flex;
@@ -326,7 +339,7 @@ console.log(motion)
           .marquee-content {
             animation-duration: 15s;
           }
-          
+
           .marquee-content:nth-child(2) {
             animation-duration: 15s;
           }

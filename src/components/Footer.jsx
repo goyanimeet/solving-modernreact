@@ -11,8 +11,8 @@ const Footer = () => {
           </div>
           <div className="pages w-fit p-4 *:text-white">
             <p className="text-2xl pb-5">PAGES</p>
-            <NavLink to="/home" className="block py-1 group">
-              <p className="text-gray-300 group-hover:text-white"> HOME</p>
+            <NavLink to="/" className="block py-1 group">
+              <p className="text-gray-300 group-hover:text-white">HOME</p>
               <div className="w-0 group-hover:w-10 bg-white h-px transition-all"></div>
             </NavLink>
             <NavLink to="/work" className="block py-1 group">
@@ -26,8 +26,8 @@ const Footer = () => {
               <div className="w-0 group-hover:w-full bg-white h-px transition-all"></div>
             </NavLink>
           </div>
-          <div className="utilitypages   w-fit p-4 *:text-white">
-            <p className="text-2xl pb-5">UTILITY PAGES</p>
+          <div className="utilitypages w-fit p-4 *:text-white ">
+            <p className="text-2xl pb-5 pr-40">UTILITY PAGES</p>
               <NavLink to="/pagenotfound" className="block py-1 group">
               <p className="text-gray-300 group-hover:text-white"> 404 ERROR PAGE</p>
               <div className="w-0 group-hover:w-26 bg-white h-px transition-all"></div>

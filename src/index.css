@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
-
+ 
 
 
 .mon {
   font-family: "Oswald", sans-serif;
+   /* font-family: "Clash Display", sans-serif; */
   font-optical-sizing: auto;
  
 }

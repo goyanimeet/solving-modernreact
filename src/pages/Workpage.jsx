@@ -3,10 +3,9 @@ import { motion } from "motion/react";
 import about1 from "../assets/images/image-1.webp";
 import about2 from "../assets/images/image-2.webp";
 import about3 from "../assets/images/image-3.webp";
-import about4 from "../assets/images/image-4.webp"
-import Footer from "../components/Footer";
-import Getintouch from "../components/Getintouch";
-const   Workpage = () => {
+import about4 from "../assets/images/image-4.webp";
+
+const Workpage = () => {
   console.log(motion);
   return (
     <>
@@ -155,7 +154,6 @@ const   Workpage = () => {
             </p>
           </div>
         </div>
-        
       </div>
     </>
   );

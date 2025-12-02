@@ -3,12 +3,13 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Banner from "./components/Banner";
 import Brandservice from "./components/Brandservice";
-import About from "./components/about";
+import About from "./components/About";
 import Getintouch from "./components/Getintouch";
 import Footer from "./components/Footer";
 import Workpage from "./pages/Workpage";
 import Contactpage from "./pages/Contactpage";
 import { Routes, Route } from "react-router";
+import Bannercircle from "./components/Bannercircle";
 
 const App = () => {
   return (
@@ -18,8 +19,9 @@ const App = () => {
           path="/"
           element={
             <>
-              <Header  />
+              <Header />
               <Home />
+              <Bannercircle />
               <Banner />
               <Brandservice />
               <About />
@@ -34,6 +36,7 @@ const App = () => {
             <>
               <Header />
               <Workpage />
+              <Bannercircle />
               <Getintouch />
               <Footer />
             </>
@@ -46,6 +49,7 @@ const App = () => {
             <>
               <Header />
               <Contactpage />
+              <Bannercircle />
               <Footer />
             </>
           }

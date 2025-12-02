@@ -5,19 +5,19 @@ import { motion } from "motion/react";
 import LocomotiveScroll from "locomotive-scroll";
 const Home = () => {
   console.log(motion);
-   const scroll = new LocomotiveScroll();
-    console.log(scroll)
+  const scroll = new LocomotiveScroll();
+  console.log(scroll);
   return (
     <>
-      <div data-scroll data-scroll-speed="1"  className="mx-auto container">
-        <div className="h-auto  w-full px-4">
-          <div className="relative overflow-hidden py-35 max-lg:py-25 max-md:py-18 max-sm:py-16  ">
+      <div data-scroll data-scroll-speed="1" className="mx-auto container">
+        <div className="h-auto bg-white w-full px-4">
+          <div className="relative overflow-hidden py-35 max-lg:py-25 max-md:py-18 max-sm:py-14  ">
             <motion.img
               initial={{
                 y: 100,
                 opacity: 0,
               }}
-                    viewport={{once:true}}
+              viewport={{ once: true }}
               whileInView={{
                 y: 0,
                 opacity: 1,
@@ -40,7 +40,7 @@ const Home = () => {
                 opacity: 1,
               }}
               transition={{ duration: 1, ease: "backInOut" }}
-              className="text-6xl absolute top-0  pb-10 pt-2 tracking-tight font-extrabold px-4 max-lg:text-5xl max-md:text-4xl max-sm:text-xl"
+              className="text-6xl absolute top-0  pb-10 pt-2 tracking-tight font-  px-4 max-lg:text-5xl max-md:text-4xl max-sm:text-xl"
             >
               {" "}
               BRAND DESIGNER FROM BERLIN
@@ -49,39 +49,59 @@ const Home = () => {
 
           <div className="flex items-center justify-between bg-lime-300  py-2">
             {/* <marquee >Branding · Logo Design · Social MEdia · Branding · Logo Design · Social MEdia · Branding · Logo Design · Social MEdia · Branding · Logo Design · Social MEdia</marquee> */}
-            <div class="logo-marquee ">
-              <div class="marquee-inner flex font-medium justify-between">
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+            <div className="logo-marquee ">
+              <div className="marquee-inner flex font-medium  justify-evenly">
+                <div className="marquee-item ">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                   <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-                <div class="marquee-item">
-                  BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                <div className="marquee-item">
+                  <p className="text-sm">
+                    BRANDING · LOGO DESIGN · SOCIAL MEDIA
+                  </p>
                 </div>
-               
               </div>
             </div>
           </div>
